@@ -4,6 +4,7 @@ const newChatForm = document.querySelector('.new-chat');
 const newNameForm = document.querySelector('.new-name');
 const updateMssg = document.querySelector('.update-mssg')
 const rooms = document.querySelector('.chat-rooms')
+const deleteBtn = document.querySelector('.delete')
 
 // add a new chat
 newChatForm.addEventListener('submit', e => {
@@ -38,6 +39,22 @@ rooms.addEventListener('click', e => {
         chatroom.getChats(chat => chatUI.render(chat))
     }
 })
+
+//delete all chats
+
+deleteBtn.addEventListener('click', () => {
+    db.collection('chats').get()
+        .then(snapshot => {
+            snapshot.docs.forEach(doc => {
+                let id = doc.id
+                console.log(doc.data(), doc.id)
+                db.collection('chats').doc(id).delete();
+            })     
+        })
+   
+})
+
+
 
 
 // check local storage for a name

@@ -26,3 +26,8 @@
     text-align: center;
     margin: 20px auto;
 }
+.delete {
+    display:block;
+    width:50%;
+}
+
