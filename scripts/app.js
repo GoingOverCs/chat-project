@@ -54,7 +54,26 @@ deleteBtn.addEventListener('click', () => {
    
 })
 
+// deleteBtn.addEventListener('click', () => {
+//     db.collection('chats')
+//         .onSnapshot(snapshot => {
+//             snapshot.docs.forEach(doc => {
+//                 let id = doc.id
+//                 console.log(doc.data(), doc.id)
+//                 db.collection('chats').doc(id).delete();
+//             })     
+//         })
+   
+// })
 
+//test delete
+// deleteBtn.addEventListener('click', () => {
+//     db.collection('chats')
+//         .onSnapshot(snapshot => {
+//             snapshot.docs.delete();    
+//         })
+   
+// })
 
 
 // check local storage for a name

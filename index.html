@@ -10,9 +10,17 @@
 <body>
     
     <!-- container and title -->
-  <nav class="navbar navbar-light bg-light">
-    <div class="container">
-      <span class="navbar-brand mb-0 h1">Cool</span>
+  <nav class="navbar navbar-light bg-white bar">
+    <div class="container justify-content-end">
+      <ul class="nav">
+        <li class="nav-item">
+         <a href="#" class="nav-link link">Login</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link link">Logout</a>
+         </li>
+      </ul>
+
     </div>
   </nav>
 
@@ -20,19 +28,24 @@
     <h1 class="my-4 text-center">Our Chat</h1>
    
     <!-- buttons for chatrooms -->
-    <div class="chat-rooms mb-3 text-center">
+    <div class="chat-rooms bg-white mb-3 pb-1 text-center sticky-top">
       <div class="my-2">Choose a chatroom:</div>
       <button class="btn" id="general">#general</button>
       <button class="btn" id="food">#food</button>
       <button class="btn" id="tv">#tv</button>
       <button class="btn" id="rant">#rant</button>
+      <div>
+        <button class="btn bg-danger delete my-4 mx-auto" id="delete">
+          <i class="material-icons">delete</i>
+        </button>
+      </div>
     </div>
 
-    <div>
+    <!-- <div>
       <button class="btn bg-danger delete my-4 mx-auto" id="delete">
         <i class="material-icons">delete</i>
       </button>
-    </div>
+    </div> -->
 
     <!-- chat list / window -->
     <div class="chat-window">
